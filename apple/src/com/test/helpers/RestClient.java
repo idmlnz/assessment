@@ -27,7 +27,7 @@ import java.util.List;
  *  	sendPut()
  * 
  * 
- * @author imalonzo
+ * @author imalonzo@gmail.com
  *
  */
 public class RestClient {
@@ -81,7 +81,7 @@ public class RestClient {
 		return jsonResult;
 	}
 	
-	// Test !!
+	// main
 	public static void main(String[] args) throws Exception {
 		RestClient rc = RestClient.getInstance();
 		JSONObject myObject = rc.sendGet("https://itunes.apple.com/search?term=jim+jones&country=ca&limit=1");
@@ -89,7 +89,5 @@ public class RestClient {
 		JSONObject aa = (JSONObject) myObject.getJSONArray("results").get(0);
 		System.out.println(aa.get("kind"));
 		System.out.println(aa.get("artistId"));
-
-
 	}
 }

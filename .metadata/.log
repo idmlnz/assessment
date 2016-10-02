@@ -1,0 +1,59 @@
+!SESSION 2016-10-02 09:56:56.459 -----------------------------------------------
+eclipse.buildId=4.6.1.M20160907-1200
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.net 1 0 2016-10-02 09:58:42.390
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2016-10-02 10:15:48.958
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2016-10-02 10:15:48.958
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-10-02 10:15:48.958
+!MESSAGE Software being installed: Vrapper - Python Extensions (Optional, requires PyDev) 0.70.0 (net.sourceforge.vrapper.eclipse.pydev.feature.feature.group 0.70.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-10-02 10:15:48.958
+!MESSAGE Missing requirement: Vrapper - Python Extensions (Optional, requires PyDev) 0.70.0 (net.sourceforge.vrapper.eclipse.pydev.feature.feature.group 0.70.0) requires 'org.python.pydev 2.6.0' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2016-10-02 10:15:48.976
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2016-10-02 10:15:48.976
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-10-02 10:15:48.976
+!MESSAGE Software being installed: Vrapper - Python Extensions (Optional, requires PyDev) 0.70.0 (net.sourceforge.vrapper.eclipse.pydev.feature.feature.group 0.70.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-10-02 10:15:48.976
+!MESSAGE Missing requirement: Vrapper - Python Extensions (Optional, requires PyDev) 0.70.0 (net.sourceforge.vrapper.eclipse.pydev.feature.feature.group 0.70.0) requires 'org.python.pydev 2.6.0' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2016-10-02 10:15:48.988
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2016-10-02 10:15:48.988
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-10-02 10:15:48.989
+!MESSAGE Software being installed: Vrapper - Python Extensions (Optional, requires PyDev) 0.70.0 (net.sourceforge.vrapper.eclipse.pydev.feature.feature.group 0.70.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-10-02 10:15:48.989
+!MESSAGE Missing requirement: Vrapper - Python Extensions (Optional, requires PyDev) 0.70.0 (net.sourceforge.vrapper.eclipse.pydev.feature.feature.group 0.70.0) requires 'org.python.pydev 2.6.0' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2016-10-02 10:15:48.989
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2016-10-02 10:15:48.989
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-10-02 10:15:48.989
+!MESSAGE Software being installed: Vrapper - Python Extensions (Optional, requires PyDev) 0.70.0 (net.sourceforge.vrapper.eclipse.pydev.feature.feature.group 0.70.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-10-02 10:15:48.989
+!MESSAGE Missing requirement: Vrapper - Python Extensions (Optional, requires PyDev) 0.70.0 (net.sourceforge.vrapper.eclipse.pydev.feature.feature.group 0.70.0) requires 'org.python.pydev 2.6.0' but it could not be found
+!SESSION 2016-10-02 10:18:44.009 -----------------------------------------------
+eclipse.buildId=4.6.1.M20160907-1200
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -data file:/Users/imalonzo/obra/apple_amanda/ecllipse_ws/ -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.net 1 0 2016-10-02 10:18:47.915
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui 2 2 2016-10-02 10:42:46.050
+!MESSAGE Invalid property category path: org.eclipse.cdt.managedbuilder.ui.properties.Page_head_build (bundle: org.eclipse.cdt.ui, propertyPage: org.eclipse.cdt.managedbuilder.ui.properties.BuildLogPreferencePage)
