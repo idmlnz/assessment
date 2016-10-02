@@ -51,8 +51,22 @@ public class SearchApiTest {
 	public void testValidMedia() throws Exception {
 		JSONObject json = rc.sendGet("https://itunes.apple.com/search?term=jim+jones&media=music&limit=1");
 		JSONObject result = (JSONObject) json.getJSONArray("results").get(0);
-		String actualCountry =  result.getString("kind");
-		Assert.assertTrue("Return record failed for media", actualCountry.equals("song"));
+		String actualMedia =  result.getString("kind");
+		Assert.assertTrue("Return record failed for media", actualMedia.equals("song"));
+	}
+
+    /**
+     * Test searchApi term paramater
+     * 	input: valid term and limit is set to 1
+     * 		
+     * @throws Exception
+     */
+	@Test
+	public void testValidTerm() throws Exception {
+		JSONObject json = rc.sendGet("https://itunes.apple.com/search?term=jim+jones&limit=1");
+		JSONObject result = (JSONObject) json.getJSONArray("results").get(0);
+		String actualTerm =  result.getString("artistName");
+		Assert.assertTrue("Return record failed for term", actualTerm.equals("Jim Jones"));
 	}
 
 }
