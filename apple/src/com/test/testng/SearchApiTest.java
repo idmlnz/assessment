@@ -3,6 +3,8 @@ package com.test.testng;
 import org.json.JSONObject;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.Assert;
+import org.junit.Assert.*;
 import com.test.helpers.RestClient;
 
 public class SearchApiTest {
@@ -13,13 +15,16 @@ public class SearchApiTest {
         rc = RestClient.getInstance();    
     }
 
+    /**
+     * Test searchApi limit parameter
+     * 	input: valid term, country and limit is set to 2
+     * 		
+     * @throws Exception
+     */
 	@Test
 	public void test() throws Exception {
-		JSONObject myObject = rc.sendGet("https://itunes.apple.com/search?term=jim+jones&country=ca&limit=1");
-		System.out.println(myObject.getString("resultCount"));
-		JSONObject aa = (JSONObject) myObject.getJSONArray("results").get(0);
-		System.out.println(aa.get("kind"));
-		System.out.println(aa.get("artistId"));
+		JSONObject json = rc.sendGet("https://itunes.apple.com/search?term=jim+jones&country=ca&limit=2");
+		Assert.assertTrue("Return record failed for limit=2", Integer.valueOf(json.getString("resultCount")) == 2);
 	}
 
 }
