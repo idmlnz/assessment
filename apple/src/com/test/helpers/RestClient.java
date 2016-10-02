@@ -88,10 +88,10 @@ public class RestClient {
 	// main
 	public static void main(String[] args) throws JSONException {
 		RestClient rc = RestClient.getInstance();
-		JSONObject myObject = rc.sendGet("https://itunes.apple.com/search?term=jim+jones&country=ca&limit=1");
+		JSONObject myObject = rc.sendGet("https://itunes.apple.com/search?term=jim+jones&country=US&limit=1");
 		System.out.println(myObject.getString("resultCount"));
 		JSONObject aa = (JSONObject) myObject.getJSONArray("results").get(0);
 		System.out.println(aa.get("kind"));
-		System.out.println(aa.get("artistId"));
+		System.out.println(aa.get("country"));
 	}
 }

@@ -17,14 +17,42 @@ public class SearchApiTest {
 
     /**
      * Test searchApi limit parameter
-     * 	input: valid term, country and limit is set to 2
+     * 	input: valid term and limit is set to 2
      * 		
      * @throws Exception
      */
 	@Test
-	public void test() throws Exception {
-		JSONObject json = rc.sendGet("https://itunes.apple.com/search?term=jim+jones&country=ca&limit=2");
+	public void testValidLimit() throws Exception {
+		JSONObject json = rc.sendGet("https://itunes.apple.com/search?term=jim+jones&limit=2");
 		Assert.assertTrue("Return record failed for limit=2", Integer.valueOf(json.getString("resultCount")) == 2);
+	}
+	
+    /**
+     * Test searchApi country paramater
+     * 	input: valid term, country and limit is set to 1
+     * 		
+     * @throws Exception
+     */
+	@Test
+	public void testValidCountry() throws Exception {
+		JSONObject json = rc.sendGet("https://itunes.apple.com/search?term=jim+jones&country=CA&limit=1");
+		JSONObject result = (JSONObject) json.getJSONArray("results").get(0);
+		String actualCountry =  result.getString("country");
+		Assert.assertTrue("Return record failed for country", actualCountry.equals("CAN"));
+	}
+
+    /**
+     * Test searchApi media paramater
+     * 	input: valid term, media as song and limit is set to 1
+     * 		
+     * @throws Exception
+     */
+	@Test
+	public void testValidMedia() throws Exception {
+		JSONObject json = rc.sendGet("https://itunes.apple.com/search?term=jim+jones&media=music&limit=1");
+		JSONObject result = (JSONObject) json.getJSONArray("results").get(0);
+		String actualCountry =  result.getString("kind");
+		Assert.assertTrue("Return record failed for media", actualCountry.equals("song"));
 	}
 
 }
