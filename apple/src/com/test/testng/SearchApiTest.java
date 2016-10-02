@@ -1,0 +1,25 @@
+package com.test.testng;
+
+import org.json.JSONObject;
+import org.junit.Before;
+import org.junit.Test;
+import com.test.helpers.RestClient;
+
+public class SearchApiTest {
+	public RestClient rc;
+
+    @Before
+    public void initialize() {
+        rc = RestClient.getInstance();    
+    }
+
+	@Test
+	public void test() throws Exception {
+		JSONObject myObject = rc.sendGet("https://itunes.apple.com/search?term=jim+jones&country=ca&limit=1");
+		System.out.println(myObject.getString("resultCount"));
+		JSONObject aa = (JSONObject) myObject.getJSONArray("results").get(0);
+		System.out.println(aa.get("kind"));
+		System.out.println(aa.get("artistId"));
+	}
+
+}

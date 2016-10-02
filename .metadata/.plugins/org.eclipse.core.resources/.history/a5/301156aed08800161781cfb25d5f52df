@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * RestClient - singleton class responsible for HTTP crud operation
  * 	sendGet - 
- * 		u - request url
+ * 		url - request url
  * 		JSONObject - JSON object result
  * 
  *  TODO:

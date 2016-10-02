@@ -2,7 +2,6 @@ INDEX VERSION 1.129+/Users/imalonzo/obra/apple_amanda/ecllipse_ws/.metadata/.plu
 3358580009.index
 1931402068.index
 3157663476.index
-674509069.index
 576073405.index
 204893112.index
 2979435446.index
