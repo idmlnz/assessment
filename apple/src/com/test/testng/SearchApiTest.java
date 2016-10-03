@@ -8,6 +8,11 @@ import org.junit.Assert.*;
 import com.test.helpers.RestClient;
 import com.test.helpers.TestProperties;
 
+/**
+ * This test suite tests the valid input for searchAPI and validates the result sets
+ * @author imalonzo
+ *
+ */
 public class SearchApiTest {
 	public RestClient rc;
 

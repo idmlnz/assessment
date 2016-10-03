@@ -63,10 +63,11 @@ public class RestClient {
 		request.addHeader("User-Agent", USER_AGENT);
 		
 		JSONObject jsonResult = null;
+		HttpResponse response = null;
 
 		StringBuffer result = new StringBuffer();
 		try {
-			HttpResponse response = client.execute(request);
+			response = client.execute(request);
 
 			logger.info("\nSending 'GET' request to URL : " + url);
 			logger.info("Response Code : " + response.getStatusLine().getStatusCode());
@@ -75,13 +76,22 @@ public class RestClient {
 
 			String line = "";
 			while ((line = rd.readLine()) != null) {
+				logger.debug("LINE: " + line);
 				result.append(line);
 			}
 			jsonResult = new JSONObject(result.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		if (jsonResult == null) {
+			jsonResult = new JSONObject();
+			try {
+				jsonResult.put("status", response.getStatusLine().getStatusCode());
+			}catch (Exception e) {
+				e.printStackTrace();
+			}
 
+		}
 		return jsonResult;
 	}
 	
