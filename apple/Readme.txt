@@ -4,6 +4,7 @@ Readme.txt
 1. The solution to the problems are written using the following:
  a. Java
  b. Junit
+ c. Eclipse IDE
 
 2. The following files are as follows:
 
