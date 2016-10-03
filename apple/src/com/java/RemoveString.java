@@ -7,6 +7,13 @@ package com.java;
  *
  */
 public class RemoveString {
+	/**
+	 *  This method iterates through the char array and removes occurrences of a character
+	 *  
+	 * @param oldS - old String
+	 * @param ch - char to remove
+	 * @return sb - new string with char removed
+	 */
 	public String removeStringIterator(String oldS, Character ch) {
 		if (oldS == null) {
 			return oldS;
@@ -24,6 +31,13 @@ public class RemoveString {
         return sb.toString();
 	}
 
+	/**
+	 * This method removes the occurrences of char using String method replaceAll
+	 * 
+	 * @param oldS - old String
+	 * @param ch - char to remove
+	 * @return newS - new string with char removed
+	 */
 	public String removeString(String oldS, Character ch) {
 		if (oldS == null) {
 			return oldS;
