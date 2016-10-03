@@ -6,6 +6,7 @@ import org.junit.Test;
 import org.junit.Assert;
 import org.junit.Assert.*;
 import com.test.helpers.RestClient;
+import com.test.helpers.TestProperties;
 
 public class SearchApiTest {
 	public RestClient rc;
@@ -23,7 +24,7 @@ public class SearchApiTest {
      */
 	@Test
 	public void testValidLimit() throws Exception {
-		JSONObject json = rc.sendGet("https://itunes.apple.com/search?term=jim+jones&limit=2");
+		JSONObject json = rc.sendGet(TestProperties.getSearchPath() + "?term=jim+jones&limit=2");
 		Assert.assertTrue("Return record failed for limit=2", Integer.valueOf(json.getString("resultCount")) == 2);
 	}
 	
@@ -35,7 +36,7 @@ public class SearchApiTest {
      */
 	@Test
 	public void testValidCountry() throws Exception {
-		JSONObject json = rc.sendGet("https://itunes.apple.com/search?term=jim+jones&country=CA&limit=1");
+		JSONObject json = rc.sendGet(TestProperties.getSearchPath() + "?term=jim+jones&country=CA&limit=1");
 		JSONObject result = (JSONObject) json.getJSONArray("results").get(0);
 		String actualCountry =  result.getString("country");
 		Assert.assertTrue("Return record failed for country", actualCountry.equals("CAN"));
@@ -49,7 +50,7 @@ public class SearchApiTest {
      */
 	@Test
 	public void testValidMedia() throws Exception {
-		JSONObject json = rc.sendGet("https://itunes.apple.com/search?term=jim+jones&media=music&limit=1");
+		JSONObject json = rc.sendGet(TestProperties.getSearchPath() + "?term=jim+jones&media=music&limit=1");
 		JSONObject result = (JSONObject) json.getJSONArray("results").get(0);
 		String actualMedia =  result.getString("kind");
 		Assert.assertTrue("Return record failed for media", actualMedia.equals("song"));
@@ -63,7 +64,7 @@ public class SearchApiTest {
      */
 	@Test
 	public void testValidTerm() throws Exception {
-		JSONObject json = rc.sendGet("https://itunes.apple.com/search?term=jim+jones&limit=1");
+		JSONObject json = rc.sendGet(TestProperties.getSearchPath() + "?term=jim+jones&limit=1");
 		JSONObject result = (JSONObject) json.getJSONArray("results").get(0);
 		String actualTerm =  result.getString("artistName");
 		Assert.assertTrue("Return record failed for term", actualTerm.equals("Jim Jones"));
