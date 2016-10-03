@@ -34,8 +34,8 @@ public class RemoveStringIteratorTest {
 	// Test if String contains literal digit
 	@Test
 	public void testLiteralDigit() {
-		String actual =  rs.removeStringIterator("hello 2world2", '2');
-		Assert.assertTrue("testNoCharacter failed", actual.equals("hello world") );
+		String actual =  rs.removeStringIterator("hello22 world222", '2');
+		Assert.assertTrue("testLiteralDigit failed", actual.equals("hello world") );
 	}
 
 
