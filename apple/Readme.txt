@@ -15,3 +15,4 @@ src/com/test/testng/RemoveStringTest.java -  test suite for removeString by iter
 
 B. Junit for iTunes search API
 src/com/test/testng/SearchApiTest.java
+src/com/test/testng/InvalidSearchApiTest.java
